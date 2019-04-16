@@ -1,12 +1,19 @@
-<textarea [value]="newPostByReference" #postInput rows="6"></textarea>
+<mat-card>
+    <mat-form-field>
+        <textarea matInput [value]="newPostByReference" #postInput rows="6"></textarea>
+    </mat-form-field>
+    <button
+        mat-raised-button
+        (click)="onAddPostByReference(postInput)"
+        type="button">
+        Add post by reference
+    </button>
+</mat-card>
+
 <hr>
-<button (click)="onAddPostByReference(postInput)" type="button">Add post by reference</button>
 <p>{{ newPostByReference }}</p>
 
 <div></div>
-<div></div>
-<div></div>
-
 <textarea [(ngModel)]="newPostByNgModel" rows="6"></textarea>
 <hr>
 <p>{{ newPostByNgModel }}</p>
