@@ -6,10 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./post-create.component.scss']
 })
 export class PostCreateComponent implements OnInit {
+  newPostByReference = '';
+  newPostByNgModel = '';
 
   constructor() { }
 
   ngOnInit() {
   }
 
+  onAddPostByReference(postInput: HTMLTextAreaElement) {
+    console.dir(postInput);
+    this.newPostByReference = postInput.value;
+  }
 }
