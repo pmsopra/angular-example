@@ -1,20 +1,33 @@
 <mat-card>
-    <mat-form-field>
-        <textarea matInput [value]="newPostByReference" #postInput rows="6"></textarea>
+    <mat-form-field class="example-full-width">
+        <input
+            matInput
+            placeholder="Title"
+            [(ngModel)]="newTitle">
     </mat-form-field>
+
+    <mat-form-field>
+        <textarea
+            matInput
+            placeholder="Content"
+            [(ngModel)]="newContent"
+            rows="4">
+        </textarea>
+    </mat-form-field>
+
     <button
         mat-raised-button
         color="primary"
-        (click)="onAddPostByReference(postInput)"
+        (click)="onAddPost()"
         type="button">
-        Add post by reference
+        Add post
     </button>
     <p>{{ newPostByReference }}</p>
 </mat-card>
 
-<mat-card>
+<!-- <mat-card>
     <mat-form-field>
         <textarea matInput [(ngModel)]="newPostByNgModel" rows="6"></textarea>
     </mat-form-field>
     <p>{{ newPostByNgModel }}</p>
-</mat-card>
+</mat-card> -->
