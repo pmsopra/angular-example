@@ -4,16 +4,17 @@
     </mat-form-field>
     <button
         mat-raised-button
+        color="primary"
         (click)="onAddPostByReference(postInput)"
         type="button">
         Add post by reference
     </button>
+    <p>{{ newPostByReference }}</p>
 </mat-card>
 
-<hr>
-<p>{{ newPostByReference }}</p>
-
-<div></div>
-<textarea [(ngModel)]="newPostByNgModel" rows="6"></textarea>
-<hr>
-<p>{{ newPostByNgModel }}</p>
+<mat-card>
+    <mat-form-field>
+        <textarea matInput [(ngModel)]="newPostByNgModel" rows="6"></textarea>
+    </mat-form-field>
+    <p>{{ newPostByNgModel }}</p>
+</mat-card>
