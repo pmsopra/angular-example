@@ -16,6 +16,6 @@ export class PostCreateComponent implements OnInit {
 
   onAddPostByReference(postInput: HTMLTextAreaElement) {
     console.dir(postInput);
-    this.newPostByReference = postInput.value;
+    this.newPostByReference = postInput.value; 
   }
 }
