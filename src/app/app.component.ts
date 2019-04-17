@@ -1,9 +1,5 @@
 import { Component } from '@angular/core';
-
-interface Post {
-  title: string;
-  content: string;
-}
+import { Post } from './posts/post.model';
 
 @Component({
   selector: 'app-root',
@@ -19,17 +15,10 @@ export class AppComponent {
     {
       title: 'Some second title',
       content: 'Some second description',
-    },
-    {
-      title: 'Some third title',
-      content: 'Some third description',
     }
   ];
 
-  public addPost(newPost: Post) {
-    const posts = [...this.posts];
-    posts.push(newPost);
-
-    this.posts = posts;
+  public addPost(newPost: Post): void {
+    this.posts.push(newPost);
   }
 }
