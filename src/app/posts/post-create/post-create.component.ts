@@ -24,12 +24,6 @@ export class PostCreateComponent implements OnInit {
       form.value.content
     );
 
-    this.setInitial(form);
-  }
-
-  // TODO Fix
-  setInitial(form: NgForm): void {
-    form.value.title = '';
-    form.value.content = '';
+    form.resetForm();
   }
 }
