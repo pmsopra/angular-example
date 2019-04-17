@@ -1,4 +1,9 @@
-<mat-accordion multi="true" class="headers-align">
+<div class="options">
+  <mat-icon (click)="closeAll()">unfold_less</mat-icon>
+  <mat-icon (click)="openAll()">unfold_more</mat-icon>
+</div>
+
+<mat-accordion #accordion="matAccordion" multi="true" class="headers-align">
   <mat-expansion-panel *ngFor="let post of posts; let i = index">
     <mat-expansion-panel-header>
       <mat-panel-title>
