@@ -17,7 +17,7 @@ export class PostCreateComponent implements OnInit {
   ngOnInit() {
   }
 
-  onAddPost() {
+  onAddPost(): void {
     this.addPost.emit({
       title: this.newTitle,
       content: this.newContent
@@ -26,7 +26,7 @@ export class PostCreateComponent implements OnInit {
     this.setInitial();
   }
 
-  setInitial() {
+  setInitial(): void {
     this.newTitle = '';
     this.newContent = '';
   }
