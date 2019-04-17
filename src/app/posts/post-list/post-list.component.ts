@@ -1,9 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-
-interface Post {
-  title: string;
-  content: string;
-}
+import { Post } from '../post.model';
 
 @Component({
   selector: 'app-post-list',
@@ -11,7 +7,7 @@ interface Post {
   styleUrls: ['./post-list.component.scss']
 })
 export class PostListComponent implements OnInit {
-  @Input() posts: Array<Post>;
+  @Input() posts: Post[];
 
   constructor() { }
 

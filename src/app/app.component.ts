@@ -11,7 +11,7 @@ interface Post {
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  posts: Array<Post> = [
+  posts: Post[] = [
     {
       title: 'Some title',
       content: 'Some description',
